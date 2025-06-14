@@ -1,40 +1,247 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juan Martín | Portafolio</title>
     <link rel="stylesheet" href="./styles/output.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-900 via-cyan-700 to-purple-800 animate-backgroundGradient text-white">
 
     <!-- Navbar -->
-    <header class="w-full fixed top-0 left-0 z-20 bg-black/40 backdrop-blur-md shadow-md">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold text-cyan-400">Juan Martín</div>
-        <ul class="hidden md:flex space-x-8 text-white font-medium">
-        <li><a href="#about" class="hover:text-cyan-400 transition">Sobre mí</a></li>
-        <li><a href="#projects" class="hover:text-cyan-400 transition">Proyectos</a></li>
-        <li><a href="#contact" class="hover:text-cyan-400 transition">Contacto</a></li>
+    <header class="w-full px-4 py-4 fixed top-0 left-0 z-50 bg-transparent">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="text-xl font-bold text-white">Juan Martín</div>
+        <ul class="hidden md:flex space-x-6 text-white">
+        <li><a href="#inicio" class="hover:text-cyan-400 transition">Home</a></li>
+        <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
+        <li><a href="#about" class="hover:text-cyan-400 transition">About Me</a></li>
+        <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
+        <li><a href="#services" class="hover:text-cyan-400 transition">Services</a></li>
+        <li><a href="#contacto" class="hover:text-cyan-400 transition">Contact</a></li>
         </ul>
-        <!-- Botón hamburguesa para móvil (opcional) -->
-        <div class="md:hidden">
-        <button id="menu-btn" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+        <button class="md:hidden text-white" id="menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
         </button>
-        </div>
     </nav>
+
+    <!-- Movil Menu -->
+    <div class="md:hidden hidden px-4 pt-2 pb-4 space-y-2 bg-[#0f0c29cc] backdrop-blur-md rounded-md mt-2" id="mobile-menu">
+        <a href="#inicio" class="block text-white hover:text-cyan-400">Home</a>
+        <a href="#projects" class="block text-white hover:text-cyan-400">Projects</a>
+        <a href="#about" class="block text-white hover:text-cyan-400">About Me</a>
+        <a href="#skills" class="block text-white hover:text-cyan-400">Skills</a>
+        <a href="#services" class="block text-white hover:text-cyan-400">Services</a>
+        <a href="#contacto" class="block text-white hover:text-cyan-400">Contact</a>
+    </div>
     </header>
     
-    <main class="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">¡Hola, soy Juan Martín!</h1>
-      <p class="text-lg md:text-xl max-w-xl">Desarrollador Web & Móvil | Amante del despliegue, la automatización y las buenas prácticas de software</p>
-    </main>
+    <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 lg:px-32 py-20 gap-12">
+        <div class="text-center md:text-left space-y-6 max-w-xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold">
+            Hi, I'm Juan Martín 👋
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300">
+            I'm a passionate Fullstack Developer focused on building scalable web & mobile applications with modern technologies.
+            </p>
+            <div class="flex flex-col md:flex-row items-center gap-4">
+            <a href="#projects" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-xl transition">
+                View Projects
+            </a>
+            <a href="#contact" class="px-6 py-3 border border-white text-white rounded-xl hover:bg-white hover:text-black transition">
+                Contact Me
+            </a>
+            </div>
+        </div>
+
+        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-cyan-500 shadow-lg">
+            <img src="./assets/img/me/perfil.png" alt="Profile Picture" class="w-full h-full object-cover scale-100 object-top" />
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 md:px-16 lg:px-32 bg-transparent text-white">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
+        
+        <!-- Aquí se inyectarán los proyectos desde JavaScript -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="projects-container">
+            <!-- JS dynamically loads project cards here -->
+        </div>
+    </section>
+
+    <!-- Extra space before next section -->
+    <div class="h-20"></div>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-6 md:px-16 lg:px-32 bg-transparent text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+            I'm <span class="text-cyan-400 font-semibold">Juan Martín Sánchez Burbano</span>, a Systems Engineering student from Bogotá, Colombia. I'm passionate about developing modern, scalable web and mobile applications. I focus on writing clean code, automating deployment pipelines, and continuously learning new technologies.  
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 mt-6 leading-relaxed">
+            My stack includes <span class="text-cyan-400">Java, Spring Boot, Angular, Tailwind, Flutter</span> and cloud-native tools like <span class="text-cyan-400">Docker, Kubernetes, Jenkins</span>. I'm also experienced with both relational and NoSQL databases.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 md:px-16 lg:px-32 bg-transparent text-white">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Skills</h2>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
+            
+            <div class="flex flex-col items-center space-y-2">
+            <i class="devicon-html5-plain colored text-5xl"></i>
+            <span class="text-sm">HTML</span>
+            </div>
+            
+            <div class="flex flex-col items-center space-y-2">
+            <i class="devicon-css3-plain colored text-5xl"></i>
+            <span class="text-sm">CSS</span>
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+            <i class="devicon-javascript-plain colored text-5xl"></i>
+            <span class="text-sm">JavaScript</span>
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+            <i class="devicon-angularjs-plain colored text-5xl"></i>
+            <span class="text-sm">Angular</span>
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+            <i class="devicon-spring-plain colored text-5xl"></i>
+            <span class="text-sm">Spring Boot</span>
+            </div>
+
+            <div class="flex flex-col items-center space-y-2">
+            <i class="devicon-docker-plain colored text-5xl"></i>
+            <span class="text-sm">Docker</span>
+            </div>
+
+            <!-- Agrega más según lo que manejes -->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 md:px-16 lg:px-32 bg-transparent text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+            <!-- Service Card -->
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+                <div class="flex justify-center mb-4">
+                <i data-lucide="globe" class="text-cyan-400 w-8 h-8"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-cyan-400 mb-2">Web Development</h3>
+                <p class="text-sm text-gray-300">Diseño y desarrollo de sitios web modernos, rápidos y responsivos usando Angular, Tailwind y más.</p>
+            </div>
+
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+                <div class="flex justify-center mb-4">
+                <i data-lucide="smartphone" class="text-cyan-400 w-8 h-8"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-cyan-400 mb-2">Mobile Apps</h3>
+                <p class="text-sm text-gray-300">Desarrollo de aplicaciones móviles multiplataforma con Flutter y Kotlin.</p>
+            </div>
+
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+                <div class="flex justify-center mb-4">
+                <i data-lucide="server-cog" class="text-cyan-400 w-8 h-8"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-cyan-400 mb-2">Backend Development</h3>
+                <p class="text-sm text-gray-300">APIs seguras, robustas y escalables con Spring Boot, JWT, seguridad y conexión a base de datos.</p>
+            </div>
+
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+                <div class="flex justify-center mb-4">
+                <i data-lucide="settings" class="text-cyan-400 w-8 h-8"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-cyan-400 mb-2">DevOps & CI/CD</h3>
+                <p class="text-sm text-gray-300">Automatización y despliegue con Jenkins, Docker, Kubernetes y buenas prácticas de integración continua.</p>
+            </div>
+
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+                <div class="flex justify-center mb-4">
+                <i data-lucide="database" class="text-cyan-400 w-8 h-8"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-cyan-400 mb-2">Database Design</h3>
+                <p class="text-sm text-gray-300">Diseño, modelado y optimización de bases de datos relacionales (MySQL, PostgreSQL) y NoSQL (MongoDB).</p>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 px-6 md:px-16 lg:px-32 bg-[#0f0c29] text-white">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Contact Me</h2>
+        
+        <div class="max-w-3xl mx-auto space-y-8">
+            
+            <p class="text-center text-lg text-gray-300">
+            Feel free to reach out through this form or any of my social channels.
+            </p>
+
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <input type="text" name="name" placeholder="Your Name" required
+                class="w-full px-4 py-3 bg-[#1a1a2e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+                <input type="email" name="email" placeholder="Your Email" required
+                class="w-full px-4 py-3 bg-[#1a1a2e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+            </div>
+            <textarea name="message" rows="5" placeholder="Your Message" required
+                class="w-full px-4 py-3 bg-[#1a1a2e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"></textarea>
+            
+            <button type="submit"
+                class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-xl transition w-full md:w-auto">
+                Send Message
+            </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f0c29] text-white py-10 px-6 mt-20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/10 pt-6">
+            
+            <div class="text-center md:text-left">
+            <h3 class="text-lg font-semibold">Juan Martín Sánchez Burbano</h3>
+            <p class="text-sm text-gray-400">Fullstack Developer | Bogotá, Colombia</p>
+            </div>
+
+            <div class="flex gap-6 text-2xl">
+            <a href="https://github.com/Palmxl" target="_blank" class="hover:text-cyan-400 transition">
+                <i class="devicon-github-original"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/juan-martín-sánchez-0769a133a" target="_blank" class="hover:text-cyan-400 transition">
+                <i class="devicon-linkedin-plain"></i>
+            </a>
+            <a href="mailto:jmartin_sanchez@javeriana.edu.co" class="hover:text-cyan-400 transition">
+                <i class="fas fa-envelope"></i>
+            </a>
+            </div>
+
+        </div>
+
+        <div class="mt-6 text-center text-xs text-gray-500">
+            © 2025 Juan Martín. All rights reserved.
+        </div>
+        </footer>
 
     <div class="absolute top-0 left-0 w-full h-full -z-10 animate-gradient bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] bg-size-200 bg-pos-0"></div>
-  </body>
+    
+    <script src="./scripts/navbar.js"></script>
+    <script type="module" src="./scripts/projects.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>
