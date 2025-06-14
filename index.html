@@ -9,63 +9,79 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
-<body class="min-h-screen bg-gradient-to-br from-blue-900 via-cyan-700 to-purple-800 animate-backgroundGradient text-white">
+<body class="min-h-screen bg-[#0f0c29] text-white">
 
     <!-- Navbar -->
-    <header class="w-full px-4 py-4 fixed top-0 left-0 z-50 bg-transparent">
-    <nav class="max-w-6xl mx-auto flex justify-between items-center">
-        <div class="text-xl font-bold text-white">Juan Martín</div>
-        <ul class="hidden md:flex space-x-6 text-white">
-        <li><a href="#inicio" class="hover:text-cyan-400 transition">Home</a></li>
-        <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
-        <li><a href="#about" class="hover:text-cyan-400 transition">About Me</a></li>
-        <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
-        <li><a href="#services" class="hover:text-cyan-400 transition">Services</a></li>
-        <li><a href="#contacto" class="hover:text-cyan-400 transition">Contact</a></li>
-        </ul>
-        <button class="md:hidden text-white" id="menu-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-        </button>
-    </nav>
+    <header class="w-full px-4 py-4">
+        <nav class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold text-white tracking-wide">JM Developer</div>
+            <ul class="hidden md:flex space-x-6 text-white font-medium">
+            <li><a href="#inicio" class="hover:text-cyan-400 transition">Home</a></li>
+            <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
+            <li><a href="#about" class="hover:text-cyan-400 transition">About Me</a></li>
+            <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition">Services</a></li>
+            <li><a href="#contacto" class="hover:text-cyan-400 transition">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-white" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            </button>
+        </nav>
 
-    <!-- Movil Menu -->
-    <div class="md:hidden hidden px-4 pt-2 pb-4 space-y-2 bg-[#0f0c29cc] backdrop-blur-md rounded-md mt-2" id="mobile-menu">
-        <a href="#inicio" class="block text-white hover:text-cyan-400">Home</a>
-        <a href="#projects" class="block text-white hover:text-cyan-400">Projects</a>
-        <a href="#about" class="block text-white hover:text-cyan-400">About Me</a>
-        <a href="#skills" class="block text-white hover:text-cyan-400">Skills</a>
-        <a href="#services" class="block text-white hover:text-cyan-400">Services</a>
-        <a href="#contacto" class="block text-white hover:text-cyan-400">Contact</a>
-    </div>
-    </header>
-    
-    <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 lg:px-32 py-20 gap-12">
-        <div class="text-center md:text-left space-y-6 max-w-xl">
-            <h1 class="text-4xl md:text-5xl font-extrabold">
-            Hi, I'm Juan Martín 👋
-            </h1>
-            <p class="text-lg md:text-xl text-gray-300">
-            I'm a passionate Fullstack Developer focused on building scalable web & mobile applications with modern technologies.
-            </p>
-            <div class="flex flex-col md:flex-row items-center gap-4">
-            <a href="#projects" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-xl transition">
-                View Projects
-            </a>
-            <a href="#contact" class="px-6 py-3 border border-white text-white rounded-xl hover:bg-white hover:text-black transition">
-                Contact Me
-            </a>
-            </div>
+        <!-- Menú móvil -->
+        <div class="md:hidden hidden px-4 pt-2 pb-4 space-y-2 rounded-md mt-2" id="mobile-menu">
+            <a href="#inicio" class="block text-white hover:text-cyan-400">Home</a>
+            <a href="#projects" class="block text-white hover:text-cyan-400">Projects</a>
+            <a href="#about" class="block text-white hover:text-cyan-400">About Me</a>
+            <a href="#skills" class="block text-white hover:text-cyan-400">Skills</a>
+            <a href="#services" class="block text-white hover:text-cyan-400">Services</a>
+            <a href="#contacto" class="block text-white hover:text-cyan-400">Contact</a>
         </div>
+    </header>
 
-        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-cyan-500 shadow-lg">
-            <img src="./assets/img/me/perfil.png" alt="Profile Picture" class="w-full h-full object-cover scale-100 object-top" />
+    <!-- Hero -->
+    <section id="inicio" class="bg-[#0f0c29] py-24 px-6 md:px-16 lg:px-32 text-white">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-16 max-w-7xl mx-auto">
+            
+            <!-- Texto -->
+            <div class="text-center md:text-left space-y-6 max-w-xl animate-fadeIn">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                Hi, I'm <span class="text-cyan-400">Juan Martín</span> 👋
+            </h1>
+
+            <!-- Animación tipo máquina de escribir (opcional) -->
+            <p class="text-lg md:text-xl text-gray-300">
+                Fullstack Developer passionate about building scalable and modern 
+                <span class="text-cyan-300 font-medium">Web</span> & 
+                <span class="text-cyan-300 font-medium">Mobile</span> solutions.
+                <div class="h-5 pt-1">
+                    <span id="typed-text" class="text-cyan-400 font-mono text-sm block"></span>
+                </div>
+            </p>
+
+            <!-- Botones -->
+            <div class="flex flex-col md:flex-row items-center gap-3 pt-2">
+                <a href="#projects" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-xl transition shadow-lg hover:shadow-cyan-500/50">
+                View Projects
+                </a>
+                <a href="#contacto" class="px-6 py-3 border border-white text-white rounded-xl hover:bg-white hover:text-black transition shadow-md">
+                Contact Me
+                </a>
+            </div>
+            </div>
+
+            <!-- Imagen con animación y glow sutil -->
+            <div class="relative group w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-[5px] border-cyan-400 shadow-2xl transition-transform hover:scale-105 duration-500">
+            <img src="./assets/img/me/perfil.png" alt="Profile Picture" class="w-full h-full object-cover object-top" />
+            <div class="absolute -inset-1 rounded-full blur-xl opacity-25 group-hover:opacity-40 bg-cyan-400 z-[-1] transition duration-500"></div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 md:px-16 lg:px-32 bg-transparent text-white">
+    <section id="projects" class="bg-gradient-to-b from-[#0f0c29] to-[#302b63] py-20 px-6 md:px-16 lg:px-32 text-white">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
         
         <!-- Aquí se inyectarán los proyectos desde JavaScript -->
@@ -78,7 +94,7 @@
     <div class="h-20"></div>
 
     <!-- About Me Section -->
-    <section id="about" class="py-20 px-6 md:px-16 lg:px-32 bg-transparent text-white">
+    <section id="about" class="bg-[#0f0c29] py-20 px-6 md:px-16 lg:px-32 text-white">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
             <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
@@ -91,7 +107,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6 md:px-16 lg:px-32 bg-transparent text-white">
+    <section id="skills" class="bg-[#302b63] py-20 px-6 md:px-16 lg:px-32 text-white">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Skills</h2>
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
             
@@ -130,7 +146,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-6 md:px-16 lg:px-32 bg-transparent text-white">
+    <section id="services" class="bg-[#0f0c29] py-20 px-6 md:px-16 lg:px-32 text-white">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-12">Services</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -181,7 +197,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="py-20 px-6 md:px-16 lg:px-32 bg-[#0f0c29] text-white">
+    <section id="contacto" class="bg-[#302b63] py-20 px-6 md:px-16 lg:px-32 text-white">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Contact Me</h2>
         
         <div class="max-w-3xl mx-auto space-y-8">
@@ -234,10 +250,10 @@
         <div class="mt-6 text-center text-xs text-gray-500">
             © 2025 Juan Martín. All rights reserved.
         </div>
-        </footer>
+    </footer>
 
-    <div class="absolute top-0 left-0 w-full h-full -z-10 animate-gradient bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] bg-size-200 bg-pos-0"></div>
-    
+    <!-- Scripts -->    
+    <script src="./scripts/hero.js"></script>
     <script src="./scripts/navbar.js"></script>
     <script type="module" src="./scripts/projects.js"></script>
     <script>
