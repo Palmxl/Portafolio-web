@@ -8,8 +8,10 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
-<body class="min-h-screen bg-[#0f0c29] text-white">
+<body class="scroll-smooth min-h-screen bg-[#0f0c29] text-white scroll-smooth">
 
     <!-- Navbar -->
     <header class="w-full px-4 py-4">
@@ -46,7 +48,7 @@
         <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-16 max-w-7xl mx-auto">
             
             <!-- Texto -->
-            <div class="text-center md:text-left space-y-6 max-w-xl animate-fadeIn">
+            <div class="text-center md:text-left space-y-6 max-w-xl" data-aos="fade-right">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                 Hi, I'm <span class="text-cyan-400">Juan Martín</span> 👋
             </h1>
@@ -73,7 +75,7 @@
             </div>
 
             <!-- Imagen con animación y glow sutil -->
-            <div class="relative group w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-[5px] border-cyan-400 shadow-2xl transition-transform hover:scale-105 duration-500">
+            <div class="relative group w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-[5px] border-cyan-400 shadow-2xl transition-transform hover:scale-105 duration-500" data-aos="zoom-in">
             <img src="./assets/img/me/perfil.png" alt="Profile Picture" class="w-full h-full object-cover object-top" />
             <div class="absolute -inset-1 rounded-full blur-xl opacity-25 group-hover:opacity-40 bg-cyan-400 z-[-1] transition duration-500"></div>
             </div>
@@ -81,7 +83,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-gradient-to-b from-[#0f0c29] to-[#302b63] py-20 px-6 md:px-16 lg:px-32 text-white">
+    <section id="projects" class="bg-gradient-to-b from-[#0f0c29] to-[#302b63] py-20 px-6 md:px-16 lg:px-32 text-white" data-aos="fade-up">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
         
         <!-- Aquí se inyectarán los proyectos desde JavaScript -->
@@ -90,69 +92,170 @@
         </div>
     </section>
 
-    <!-- Extra space before next section -->
-    <div class="h-20"></div>
+<!-- About Me Section -->
+<section id="about" class="bg-gradient-to-b from-[#302b63] to-[#0f0c29] py-20 px-6 md:px-16 lg:px-32 text-white" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-    <!-- About Me Section -->
-    <section id="about" class="bg-[#0f0c29] py-20 px-6 md:px-16 lg:px-32 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
-            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-            I'm <span class="text-cyan-400 font-semibold">Juan Martín Sánchez Burbano</span>, a Systems Engineering student from Bogotá, Colombia. I'm passionate about developing modern, scalable web and mobile applications. I focus on writing clean code, automating deployment pipelines, and continuously learning new technologies.  
-            </p>
-            <p class="text-lg md:text-xl text-gray-300 mt-6 leading-relaxed">
-            My stack includes <span class="text-cyan-400">Java, Spring Boot, Angular, Tailwind, Flutter</span> and cloud-native tools like <span class="text-cyan-400">Docker, Kubernetes, Jenkins</span>. I'm also experienced with both relational and NoSQL databases.
-            </p>
+    <!-- Animación Lottie con borde degradado animado -->
+    <div class="flex justify-center" data-aos="zoom-in-right">
+      <div class="p-[3px] rounded-full bg-gradient-to-tr from-cyan-400 via-purple-500 to-pink-500 animate-gradient-spin">
+        <div class="bg-[#302b63] rounded-full p-4">
+          <lottie-player
+            src="./assets/img/projects/animacion.json"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px;"
+            loop
+            autoplay>
+          </lottie-player>
         </div>
-    </section>
+      </div>
+    </div>
+
+    <!-- Texto -->
+    <div data-aos="fade-left" data-aos-delay="100">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center md:text-left">About Me</h2>
+      <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+        I'm <span class="text-cyan-400 font-semibold">Juan Martín Sánchez Burbano</span>, a Systems Engineering student from Bogotá, Colombia. I'm passionate about developing modern, scalable web and mobile applications. I focus on writing clean code, automating deployment pipelines, and continuously learning new technologies.  
+      </p>
+      <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+        My stack includes <span class="text-cyan-400">Java, Spring Boot, Angular, Tailwind, Flutter</span> and cloud-native tools like <span class="text-cyan-400">Docker, Kubernetes, Jenkins</span>. I'm also experienced with both relational and NoSQL databases.
+      </p>
+      <p class="mt-6 italic text-cyan-400 text-lg text-center md:text-left">
+        “Code is like humor. When you have to explain it, it’s bad.” – Cory House
+      </p>
+
+      <!-- Botones con íconos -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+        <a href="https://github.com/Palmxl" target="_blank" class="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2.5 rounded-lg font-medium transition">
+          <i data-lucide="github" class="w-5 h-5"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/juan-martín-sánchez-0769a133a" target="_blank" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition">
+          <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
+        </a>
+        <a href="./assets/CV-JuanMartin.pdf" target="_blank" class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-lg font-medium transition">
+          <i data-lucide="file-text" class="w-5 h-5"></i> View CV
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-[#302b63] py-20 px-6 md:px-16 lg:px-32 text-white">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Skills</h2>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
-            
-            <div class="flex flex-col items-center space-y-2">
-            <i class="devicon-html5-plain colored text-5xl"></i>
-            <span class="text-sm">HTML</span>
-            </div>
-            
-            <div class="flex flex-col items-center space-y-2">
-            <i class="devicon-css3-plain colored text-5xl"></i>
-            <span class="text-sm">CSS</span>
-            </div>
+    <section id="skills" class="bg-gradient-to-b from-[#0f0c29] to-[#302b63] py-20 px-6 md:px-16 lg:px-32 text-white">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Skills</h2>
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
 
-            <div class="flex flex-col items-center space-y-2">
-            <i class="devicon-javascript-plain colored text-5xl"></i>
-            <span class="text-sm">JavaScript</span>
-            </div>
-
-            <div class="flex flex-col items-center space-y-2">
-            <i class="devicon-angularjs-plain colored text-5xl"></i>
-            <span class="text-sm">Angular</span>
-            </div>
-
-            <div class="flex flex-col items-center space-y-2">
-            <i class="devicon-spring-plain colored text-5xl"></i>
-            <span class="text-sm">Spring Boot</span>
-            </div>
-
-            <div class="flex flex-col items-center space-y-2">
-            <i class="devicon-docker-plain colored text-5xl"></i>
-            <span class="text-sm">Docker</span>
-            </div>
-
-            <!-- Agrega más según lo que manejes -->
+        <!-- Línea 1 -->
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-html5-plain colored text-5xl"></i>
+        <span class="text-sm">HTML</span>
         </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-css3-plain colored text-5xl"></i>
+        <span class="text-sm">CSS</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-javascript-plain colored text-5xl"></i>
+        <span class="text-sm">JavaScript</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-typescript-plain colored text-5xl"></i>
+        <span class="text-sm">TypeScript</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-angularjs-plain colored text-5xl"></i>
+        <span class="text-sm">Angular</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-tailwindcss-plain colored text-5xl"></i>
+        <span class="text-sm">Tailwind</span>
+        </div>
+
+        <!-- Línea 2 -->
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-flutter-plain colored text-5xl"></i>
+        <span class="text-sm">Flutter</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-kotlin-plain colored text-5xl"></i>
+        <span class="text-sm">Kotlin</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-java-plain colored text-5xl"></i>
+        <span class="text-sm">Java</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-c-plain colored text-5xl"></i>
+        <span class="text-sm">C</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-cplusplus-plain colored text-5xl"></i>
+        <span class="text-sm">C++</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-python-plain colored text-5xl"></i>
+        <span class="text-sm">Python</span>
+        </div>
+
+        <!-- Línea 3 -->
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-spring-plain colored text-5xl"></i>
+        <span class="text-sm">Spring Boot</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-docker-plain colored text-5xl"></i>
+        <span class="text-sm">Docker</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-kubernetes-plain colored text-5xl"></i>
+        <span class="text-sm">Kubernetes</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-mysql-plain colored text-5xl"></i>
+        <span class="text-sm">MySQL</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-mongodb-plain colored text-5xl"></i>
+        <span class="text-sm">MongoDB</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-postgresql-plain colored text-5xl"></i>
+        <span class="text-sm">PostgreSQL</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2" data-aos="zoom-in">
+        <i class="devicon-jenkins-plain colored text-5xl"></i>
+        <span class="text-sm">Jenkins</span>
+        </div>
+
+    </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="bg-[#0f0c29] py-20 px-6 md:px-16 lg:px-32 text-white">
+    <section id="services" class="bg-gradient-to-b from-[#302b63] to-[#0f0c29] py-16 px-4 text-white" data-aos="fade-up">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-12">Services</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
 
             <!-- Service Card -->
-            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2" data-aos="flip-left">
                 <div class="flex justify-center mb-4">
                 <i data-lucide="globe" class="text-cyan-400 w-8 h-8"></i>
                 </div>
@@ -160,7 +263,7 @@
                 <p class="text-sm text-gray-300">Diseño y desarrollo de sitios web modernos, rápidos y responsivos usando Angular, Tailwind y más.</p>
             </div>
 
-            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2" data-aos="flip-left">
                 <div class="flex justify-center mb-4">
                 <i data-lucide="smartphone" class="text-cyan-400 w-8 h-8"></i>
                 </div>
@@ -168,7 +271,7 @@
                 <p class="text-sm text-gray-300">Desarrollo de aplicaciones móviles multiplataforma con Flutter y Kotlin.</p>
             </div>
 
-            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2" data-aos="flip-left">
                 <div class="flex justify-center mb-4">
                 <i data-lucide="server-cog" class="text-cyan-400 w-8 h-8"></i>
                 </div>
@@ -176,7 +279,7 @@
                 <p class="text-sm text-gray-300">APIs seguras, robustas y escalables con Spring Boot, JWT, seguridad y conexión a base de datos.</p>
             </div>
 
-            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2" data-aos="flip-left">
                 <div class="flex justify-center mb-4">
                 <i data-lucide="settings" class="text-cyan-400 w-8 h-8"></i>
                 </div>
@@ -184,7 +287,7 @@
                 <p class="text-sm text-gray-300">Automatización y despliegue con Jenkins, Docker, Kubernetes y buenas prácticas de integración continua.</p>
             </div>
 
-            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2">
+            <div class="bg-[#1a1a2e] rounded-2xl p-6 shadow-xl hover:shadow-cyan-500/40 transition-transform transform hover:-translate-y-2" data-aos="flip-left">
                 <div class="flex justify-center mb-4">
                 <i data-lucide="database" class="text-cyan-400 w-8 h-8"></i>
                 </div>
@@ -194,11 +297,11 @@
 
             </div>
         </div>
-    </section>
+    </section >
 
     <!-- Contact Section -->
-    <section id="contacto" class="bg-[#302b63] py-20 px-6 md:px-16 lg:px-32 text-white">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Contact Me</h2>
+    <section id="contacto" class="bg-gradient-to-b from-[#0f0c29] to-[#0f0c29] py-16 px-4 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Contact Me</h2>
         
         <div class="max-w-3xl mx-auto space-y-8">
             
@@ -206,7 +309,7 @@
             Feel free to reach out through this form or any of my social channels.
             </p>
 
-            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6" data-aos="fade-up">
             <div class="grid md:grid-cols-2 gap-6">
                 <input type="text" name="name" placeholder="Your Name" required
                 class="w-full px-4 py-3 bg-[#1a1a2e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" />
@@ -225,8 +328,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0f0c29] text-white py-10 px-6 mt-20">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/10 pt-6">
+    <footer class="bg-gradient-to-b from-[#0f0c29] to-[#000000] text-white py-10 px-6 mt-20" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/25 pt-6">
             
             <div class="text-center md:text-left">
             <h3 class="text-lg font-semibold">Juan Martín Sánchez Burbano</h3>
@@ -252,10 +355,35 @@
         </div>
     </footer>
 
+    <!-- Botón subir -->
+    <button id="scrollToTopBtn"
+    class="fixed bottom-6 right-6 z-50 opacity-0 pointer-events-none transition-opacity duration-300 bg-blue-600 hover:bg-blue-500 text-white p-3 rounded-full shadow-lg shadow-blue-500/50">
+    <!-- Flecha SVG moderna -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+    </button>
+
     <!-- Scripts -->    
     <script src="./scripts/hero.js"></script>
     <script src="./scripts/navbar.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" src="./scripts/projects.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        once: false,          // ❗ permite que se repita la animación
+        mirror: true,         // ❗ vuelve a animar al hacer scroll hacia arriba
+        duration: 1000,       // duración de la animación en ms
+        easing: 'ease-in-out' // suavidad
+    });
+    </script>
     <script>
         lucide.createIcons();
     </script>
