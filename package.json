@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "npx tailwindcss -i ./styles/styles.css -o ./styles/output.css --watch",
     "build": "tailwindcss -i ./styles/styles.css -o ./styles/output.css",
     "test": "cypress open"
   },
