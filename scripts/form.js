@@ -1,20 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
+  const form = document.querySelector("#contact-form");
+  const inputs = form.querySelectorAll("input, textarea");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const formData = new FormData(form);
 
-    // Crear contenedor del mensaje
+    // Mensaje visual
     const messageBox = document.createElement("div");
     messageBox.innerHTML = `✅ Message sent successfully!`;
-
     messageBox.className = `
       fixed top-5 left-1/2 transform -translate-x-1/2 
       bg-emerald-600 text-white px-6 py-3 
-      rounded-xl shadow-lg text-sm z-50 transition-opacity 
-      duration-300 ease-in-out opacity-100 flex items-center gap-2
+      rounded-xl shadow-lg text-sm z-50 transition-all 
+      duration-500 ease-in-out opacity-100 flex items-center gap-2
     `;
     document.body.appendChild(messageBox);
 
@@ -28,8 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (response.ok) {
-        form.reset();
-        messageBox.innerHTML = `✅ Message sent successfully!`;
+        // Animación suave para vaciar campos
+        inputs.forEach((input) => {
+          input.classList.add("transition-all", "duration-500", "opacity-50");
+          setTimeout(() => {
+            input.value = "";
+            input.classList.remove("opacity-50");
+          }, 300);
+        });
+
         setTimeout(() => {
           messageBox.style.opacity = "0";
           setTimeout(() => messageBox.remove(), 500);
