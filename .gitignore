@@ -1,0 +1,32 @@
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Tailwind output
+styles/output.css
+
+# Optional logs and temp files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# VS Code settings
+.vscode/
+
+# MacOS files
+*.DS_Store
+
+# Environment files
+.env
+
+# Deploy artifact from GitHub Pages
+.github/
