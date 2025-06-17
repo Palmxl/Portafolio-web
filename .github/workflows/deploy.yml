@@ -21,7 +21,8 @@ jobs:
       run: npm install
 
     - name: Build Tailwind CSS
-      run: npm run build
+      run: npx tailwindcss -i ./styles/styles.css -o ./styles/output.css
+
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
