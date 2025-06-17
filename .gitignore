@@ -38,3 +38,7 @@ dist/
 
 # Dev notes / docs
 README_TOOLS.md
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
