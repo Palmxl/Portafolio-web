@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        git: '#f1502f', // Color original de Git para usar con text-git
+      },
       backgroundSize: {
         'size-200': '200% 200%',
       },
