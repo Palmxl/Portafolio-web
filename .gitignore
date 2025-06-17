@@ -1,4 +1,3 @@
-
 # Node.js
 node_modules/
 npm-debug.log*
@@ -36,3 +35,6 @@ dist/
 *.njsproj
 *.sln
 *.sw?
+
+# Dev notes / docs
+README_TOOLS.md
