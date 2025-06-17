@@ -18,13 +18,10 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Install Tailwind CLI globally
-        run: npm install -g tailwindcss
-
-      - name: Build Tailwind CSS
-        run: tailwindcss -i ./styles/styles.css -o ./styles/output.css
+      - name: Build Tailwind CSS using npx
+        run: npx tailwindcss -i ./styles/styles.css -o ./styles/output.css
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
