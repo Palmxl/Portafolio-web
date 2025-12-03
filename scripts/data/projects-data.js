@@ -16,7 +16,7 @@ export const projects = [
   {
     title: "Sistema Distribuido de Biblioteca",
     description: "Proyecto académico que simula una biblioteca digital usando una arquitectura distribuida basada en actores. Implementa comunicación entre procesos con ZeroMQ, gestión de autores y consultas, y un esquema de replicación MySQL para garantizar disponibilidad y consistencia.",
-    image: "./assets/img/projects/biblioteca.jpg",
+    image: "./assets/img/projects/biblioteca.png",
     technologies: ["Python", "ZeroMQ", "MySQL", "Sistemas Distribuidos"],
     link: "https://github.com/Palmxl/Proyecto-Biblioteca"
   },
