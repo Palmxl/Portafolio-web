@@ -14,6 +14,20 @@ export const projects = [
     link: "https://github.com/TeamDinamitaWeb/ProyectoArriendaTuFinca/tree/PruebaLocal"
   },
   {
+    title: "Sistema Distribuido de Biblioteca",
+    description: "Proyecto académico que simula una biblioteca digital usando una arquitectura distribuida basada en actores. Implementa comunicación entre procesos con ZeroMQ, gestión de autores y consultas, y un esquema de replicación MySQL para garantizar disponibilidad y consistencia.",
+    image: "./assets/img/projects/biblioteca.jpg",
+    technologies: ["Python", "ZeroMQ", "MySQL", "Sistemas Distribuidos"],
+    link: "https://github.com/Palmxl/Proyecto-Biblioteca"
+  },
+  {
+    title: "StudyHub - App Móvil Inteligente",
+    description: "Aplicación móvil diseñada para estudiantes universitarios que combina herramientas de organización con funciones de IA. Incluye generación de quices personalizados usando modelos de lenguaje, escaneo OCR para convertir apuntes físicos en texto digital y un gestor de tareas geolocalizadas dentro del campus.",
+    image: "./assets/img/projects/studyhub.jpeg",
+    technologies: ["Flutter", "Dart", "Firebase", "OCR", "IA"],
+    link: "https://github.com/Palmxl/StudyHub"
+  },
+  {
     title: "StartupSales – JavaFX & MySQL",
     description: "Academic project developed for the Software Engineering Fundamentals course. A desktop application built with JavaFX that allows users to register products, perform sales and purchases, and track transactions. Data persistence is handled using MySQL.",
     image: "./assets/img/projects/Startuplogo.jpeg",
