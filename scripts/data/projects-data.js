@@ -14,15 +14,15 @@ export const projects = [
     link: "https://github.com/TeamDinamitaWeb/ProyectoArriendaTuFinca/tree/PruebaLocal"
   },
   {
-    title: "Sistema Distribuido de Biblioteca",
-    description: "Proyecto académico que simula una biblioteca digital usando una arquitectura distribuida basada en actores. Implementa comunicación entre procesos con ZeroMQ, gestión de autores y consultas, y un esquema de replicación MySQL para garantizar disponibilidad y consistencia.",
+    title: "Distributed Library System",
+    description: "Academic project that simulates a digital library using a distributed actor-based architecture. It implements inter-process communication with ZeroMQ, manages authors and queries, and uses a MySQL replication scheme to ensure availability and consistency.",
     image: "./assets/img/projects/biblioteca.png",
     technologies: ["Python", "ZeroMQ", "MySQL", "Sistemas Distribuidos"],
     link: "https://github.com/Palmxl/Proyecto-Biblioteca"
   },
   {
-    title: "StudyHub - App Móvil Inteligente",
-    description: "Aplicación móvil diseñada para estudiantes universitarios que combina herramientas de organización con funciones de IA. Incluye generación de quices personalizados usando modelos de lenguaje, escaneo OCR para convertir apuntes físicos en texto digital y un gestor de tareas geolocalizadas dentro del campus.",
+    title: "StudyHub - Smart Mobile App",
+    description: "Mobile application designed for university students that combines organizational tools with AI-powered features. It includes personalized quiz generation using language models, OCR scanning to convert handwritten notes into digital text, and a location-based task manager for activities inside the campus.",
     image: "./assets/img/projects/studyhub.jpeg",
     technologies: ["Flutter", "Dart", "Firebase", "OCR", "IA"],
     link: "https://github.com/Palmxl/StudyHub"
